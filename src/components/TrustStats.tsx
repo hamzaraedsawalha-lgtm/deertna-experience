@@ -187,7 +187,9 @@ export default function TrustStats() {
                 نحن لا نبيع منتجاً — نشارككم جزءاً من أرضنا وعائلتنا
               </span>
             </div>
-            <motion.a href="#contact"
+            <motion.a href="https://wa.me/962796875461?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%20%D8%AF%D9%8A%D8%B1%D8%AA%D9%86%D8%A7"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ y: -1, boxShadow: `0 6px 20px rgba(47,143,87,0.25)` }}
               transition={{ duration: 0.2 }}
               className="inline-flex items-center gap-2 rounded-full font-[700] text-[13px] px-6 py-2.5 cursor-pointer"

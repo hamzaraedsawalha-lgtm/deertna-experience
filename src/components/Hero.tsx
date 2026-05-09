@@ -172,24 +172,29 @@ export default function Hero() {
                 transition={{ duration: 0.85, delay: 0.62, ease: E }}
                 className="flex flex-wrap gap-3 mb-12">
 
-                <motion.button
-                  onClick={() => {
-                    document.getElementById("products")?.scrollIntoView({ behavior: "smooth", block: "start" });
-                  }}
+                {/* Primary — WhatsApp */}
+                <motion.a
+                  href="https://wa.me/962796875461"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ y: -2, boxShadow: `0 12px 36px rgba(11,61,145,0.30)` }}
                   transition={{ duration: 0.2 }}
                   className="inline-flex items-center gap-2.5 rounded-full font-[700] text-[14px] px-8 py-4 cursor-pointer"
                   style={{ background: C.blue, color: C.cream, boxShadow: `0 4px 22px rgba(11,61,145,0.22)` }}>
-                  اكتشف منتجاتنا <span style={{ fontSize: "15px", lineHeight: 1 }}>←</span>
-                </motion.button>
+                  تواصل معنا <span style={{ fontSize: "15px", lineHeight: 1 }}>←</span>
+                </motion.a>
 
-                <motion.a href="#catalog"
+                {/* Secondary — smooth scroll to products */}
+                <motion.button
+                  onClick={() => {
+                    document.getElementById("catalog")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
                   whileHover={{ y: -2, background: `rgba(11,61,145,0.06)`, borderColor: `rgba(11,61,145,0.28)` }}
                   transition={{ duration: 0.2 }}
                   className="inline-flex items-center gap-2.5 rounded-full font-[600] text-[14px] px-8 py-4 cursor-pointer border"
                   style={{ borderColor: `rgba(11,61,145,0.18)`, color: C.blue }}>
-                  تشكيلة منتجاتنا
-                </motion.a>
+                  استعراض المنتجات
+                </motion.button>
               </motion.div>
 
               {/* Stats row — warm charcoal */}
