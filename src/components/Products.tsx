@@ -258,6 +258,7 @@ export default function Products() {
             <span style={{ fontSize: "12px", fontWeight: 500, color: "rgba(26,44,30,0.45)" }}>
               جميع منتجاتنا طازجة يومياً · بدون مواد حافظة
             </span>
+          </div>
         </div>
       </div>
 
