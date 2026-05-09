@@ -258,14 +258,6 @@ export default function Products() {
             <span style={{ fontSize: "12px", fontWeight: 500, color: "rgba(26,44,30,0.45)" }}>
               جميع منتجاتنا طازجة يومياً · بدون مواد حافظة
             </span>
-          </div>
-          <motion.a href="#order"
-            whileHover={{ y: -1, boxShadow: `0 6px 20px rgba(47,143,87,0.25)` }}
-            transition={{ duration: 0.2 }}
-            className="inline-flex items-center gap-2 rounded-full font-[700] text-[13px] px-6 py-2.5 cursor-pointer"
-            style={{ background: C.green, color: "#fff", boxShadow: `0 3px 12px rgba(47,143,87,0.18)` }}>
-            تعرّف أكثر <span style={{ fontSize: "13px" }}>←</span>
-          </motion.a>
         </div>
       </div>
 
