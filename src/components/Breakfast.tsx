@@ -50,7 +50,7 @@ export default function Breakfast() {
               هذا ما نصنعه كل يوم لأجلكم.
             </p>
             <p className="text-[#0D2B45]/55 font-[600] text-[13px] italic mb-10">
-              "طعمٌ يذكّرك بطفولتك — لأن الطريقة لم تتغير."
+              &ldquo;طعمٌ يذكّرك بطفولتك — لأن الطريقة لم تتغير.&rdquo;
             </p>
             <a href="#products"
               className="inline-flex items-center gap-2.5 rounded-full bg-[#0D2B45] text-white px-7 py-3 font-[700] text-[14px] hover:bg-[#2E7D32] transition-all duration-400 hover:-translate-y-0.5 shadow-md">
