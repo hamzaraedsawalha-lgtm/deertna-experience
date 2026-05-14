@@ -7,8 +7,8 @@ const C = { blue:"#0B3D91", green:"#2F8F57", cream:"#F6F1E8", gold:"#C9A46A" } a
 const BG = "#1F3528";
 const E  = [0.16,1,0.3,1] as const;
 
-const dim  = "rgba(246,241,232,0.65)";
-const mute = "rgba(246,241,232,0.38)";
+const dim  = "rgba(246,241,232,0.80)";
+const mute = "rgba(246,241,232,0.50)";
 
 function SocialLink({ href, label, children }: { href:string; label:string; children:React.ReactNode }) {
   return (
@@ -34,26 +34,26 @@ export default function Footer() {
 
       {/* Cream top fade — connects from cream sections above */}
       <div className="absolute top-0 left-0 right-0 h-16 pointer-events-none"
-        style={{ background:`linear-gradient(to bottom, ${C.cream}, transparent)` }}/>
+        style={{ background:`linear-gradient(to bottom, ${C.cream}15, transparent)` }}/>
       <div className="absolute top-16 left-0 right-0 h-px"
         style={{ background:`linear-gradient(to right, transparent, rgba(201,164,106,0.20), transparent)` }}/>
 
       <div className="relative z-10 max-w-[1320px] mx-auto px-6 md:px-14 pt-14 pb-8">
 
         {/* ── 3-column main grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 lg:gap-6 mb-8 items-start">
 
           {/* LEFT — Brand */}
           <motion.div initial={{ opacity:0, y:16 }} whileInView={{ opacity:1, y:0 }}
             viewport={{ once:true }} transition={{ duration:0.9, ease:E }}>
             <Link href="/" className="inline-block mb-5">
-              <div className="relative w-32 h-14 rounded-xl overflow-hidden"
-                style={{ background:"rgba(246,241,232,0.07)", border:"1px solid rgba(246,241,232,0.10)" }}>
-                <Image src="/logo11.png" alt="ديرتنا" fill className="object-contain p-2"/>
+              <div className="relative w-36 h-16 rounded-xl overflow-hidden"
+                style={{ background:"rgba(246,241,232,0.02)", border:"1px solid rgba(246,241,232,0.06)" }}>
+                <Image src="/logo11.png" alt="ديرتنا" fill className="object-contain p-1.5"/>
               </div>
             </Link>
             <p className="leading-[1.75] mb-6 font-[400]"
-              style={{ fontSize:"13.5px", color:dim, maxWidth:240 }}>
+              style={{ fontSize:"14px", color:dim, maxWidth:260 }}>
               منتجات ألبان وأجبان طازجة تُصنع يومياً بجودة محلية وطعم تقليدي.
             </p>
             {/* Trust badges */}
@@ -70,14 +70,15 @@ export default function Footer() {
           {/* CENTER — Contact */}
           <motion.div initial={{ opacity:0, y:16 }} whileInView={{ opacity:1, y:0 }}
             viewport={{ once:true }} transition={{ duration:0.9, delay:0.10, ease:E }}
-            className="flex flex-col gap-4">
-            <h4 style={{ fontSize:"11px", fontWeight:700, letterSpacing:"0.11em", color:mute }}>
+            className="flex flex-col">
+            <h4 className="mt-0 mb-6" style={{ fontSize:"11px", fontWeight:700, letterSpacing:"0.11em", color:mute, lineHeight: 1 }}>
               تواصل معنا
             </h4>
+            <div className="flex flex-col gap-4">
             {[
               { icon:<PhoneIcon/>, text:"0796875461", href:"tel:+962796875461" },
               { icon:<WAIcon/>, text:"واتساب مباشر", href:"https://wa.me/962796875461" },
-              { icon:<EmailIcon/>, text:"deertnadiary@gmail.com", href:"mailto:deertnadiary@gmail.com" },
+              { icon:<EmailIcon/>, text:"dertna2019@outlook.com", href:"mailto:dertna2019@outlook.com" },
               { icon:<PinIcon/>, text:"عمّان، الأردن", href:undefined },
             ].map((c,i) => (
               <div key={i} className="flex items-center gap-3">
@@ -89,25 +90,27 @@ export default function Footer() {
                   <a href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined}
                     rel="noopener noreferrer"
                     className="transition-colors duration-250"
-                    style={{ fontSize:"13px", fontWeight:400, color:dim }}
+                    style={{ fontSize:"14px", fontWeight:500, color:dim }}
                     onMouseEnter={e=>(e.currentTarget.style.color=C.cream)}
                     onMouseLeave={e=>(e.currentTarget.style.color=dim)}>
                     {c.text}
                   </a>
                 ) : (
-                  <span style={{ fontSize:"13px", color:dim }}>{c.text}</span>
+                  <span style={{ fontSize:"14px", fontWeight:500, color:dim }}>{c.text}</span>
                 )}
               </div>
             ))}
+            </div>
           </motion.div>
 
           {/* RIGHT — Social */}
           <motion.div initial={{ opacity:0, y:16 }} whileInView={{ opacity:1, y:0 }}
             viewport={{ once:true }} transition={{ duration:0.9, delay:0.18, ease:E }}
-            className="flex flex-col gap-5">
-            <h4 style={{ fontSize:"11px", fontWeight:700, letterSpacing:"0.11em", color:mute }}>
+            className="flex flex-col">
+            <h4 className="mt-0 mb-6" style={{ fontSize:"11px", fontWeight:700, letterSpacing:"0.11em", color:mute, lineHeight: 1 }}>
               تابعنا
             </h4>
+            <div className="flex flex-col gap-5">
             <div className="flex gap-3">
               <SocialLink href="https://instagram.com/deertna.jo" label="Instagram"><IGIcon/></SocialLink>
               <SocialLink href="https://facebook.com/deertna.jo" label="Facebook"><FBIcon/></SocialLink>
@@ -121,6 +124,7 @@ export default function Footer() {
               style={{ background:"#3D7A55", color:C.cream, boxShadow:"0 4px 16px rgba(61,122,85,0.25)" }}>
               <WAIconSocial/> اطلب الآن عبر واتساب
             </motion.a>
+            </div>
           </motion.div>
         </div>
 
@@ -130,15 +134,15 @@ export default function Footer() {
 
         {/* ── Bottom bar ── */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p style={{ fontSize:"12px", color:"rgba(246,241,232,0.25)", fontWeight:500 }}>
+          <p style={{ fontSize:"13px", color:"rgba(246,241,232,0.45)", fontWeight:500 }}>
             © {new Date().getFullYear()} ديرتنا. جميع الحقوق محفوظة.
           </p>
           <div className="flex gap-5">
             {["الشروط والأحكام","سياسة الخصوصية"].map(t=>(
               <a key={t} href="#"
-                style={{ fontSize:"12px", color:"rgba(246,241,232,0.25)", fontWeight:500 }}
-                onMouseEnter={e=>(e.currentTarget.style.color="rgba(246,241,232,0.50)")}
-                onMouseLeave={e=>(e.currentTarget.style.color="rgba(246,241,232,0.25)")}>
+                style={{ fontSize:"13px", color:"rgba(246,241,232,0.45)", fontWeight:500 }}
+                onMouseEnter={e=>(e.currentTarget.style.color="rgba(246,241,232,0.80)")}
+                onMouseLeave={e=>(e.currentTarget.style.color="rgba(246,241,232,0.45)")}>
                 {t}
               </a>
             ))}

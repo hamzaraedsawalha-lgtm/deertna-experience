@@ -27,18 +27,19 @@ const PRODUCTS = [
   { name: "نابلسية فاكيوم",         accent: "أصالة بتغليف عصري",    cat: "فاكيوم",  badge: "فاكيوم",         img: "/p-cheese-vac-nabulsi.png",    desc: "نكهة نابلسية أصيلة محفوظة بتقنية فاكيوم حديثة — لمن يبحث عن الأصالة بكل مكان." },
   { name: "مستكة فاكيوم",           accent: "عطر لا يُنسى",          cat: "فاكيوم",  badge: "فاكيوم",         img: "/p-cheese-vac-masnaka.png",    desc: "مستكة ذهبية الطعم محفوظة بالفاكيوم — تحافظ على نضارتها وعطرها الفريد في كل لقمة." },
   { name: "مستكة",                  accent: "ذهبية الطعم والنكهة",   cat: "جبنة",    badge: "طازج يومياً",    img: "/p-cheese-masnaka.png",        desc: "مستكة طبيعية بطعم ونكهة لا تُنسى — تُقدَّم طازجة يومياً لتمنحك أصدق تجربة دسمة." },
-  { name: "لبنة طرية",              accent: "كريمية من مزارعنا",     cat: "لبنة",    badge: "طازج يومياً",    img: "/p-labneh-soft.png",           desc: "مصنوعة يومياً من أجود الحليب الطازج — ناعمة كالحرير تُقدَّم مع زيت الزيتون البكر." },
+  { name: "لبنة طرية",              accent: "كريمية من مزارعنا",     cat: "لبنة",    badge: "طازج يومياً",    img: "/p-labneh-soft.png",            desc: "مصنوعة يومياً من أجود الحليب الطازج — ناعمة كالحرير تُقدَّم مع زيت الزيتون البكر." },
   { name: "لبنة جامدة فاكيوم",      accent: "جودة محفوظة دائماً",   cat: "لبنة",    badge: "فاكيوم",         img: "/p-labneh-hard-vac.png",       desc: "لبنة جامدة محفوظة بتقنية الفاكيوم — للحفاظ على جودتها الطبيعية في كل وجبة." },
-  { name: "لبنة جامدة حل",          accent: "تقليدية وأصيلة",        cat: "لبنة",    badge: "صناعة تقليدية", img: "/p-labneh-hard.png",           desc: "لبنة جامدة بنكهة تقليدية أصيلة — صُنعت بنفس وصفة الأجداد دون أي تغيير." },
+  { name: "لبنة جامدة حل",          accent: "تقليدية وأصيلة",        cat: "لبنة",    badge: "صناعة تقليدية", img: "/p-labneh-hard.png",            desc: "لبنة جامدة بنكهة تقليدية أصيلة — صُنعت بنفس وصفة الأجداد دون أي تغيير." },
   { name: "لبنة جرشية",             accent: "خفيفة ومميزة",          cat: "لبنة",    badge: "طبيعي ١٠٠٪",    img: "/p-labneh-jarshiya.png",       desc: "لبنة جرشية بملمس خفيف ونكهة طبيعية مميزة — خيار راقٍ لمن يبحث عن التميز." },
   { name: "لبنة بالزيت · زعتر",     accent: "نكهة الصباح الأصيل",   cat: "لبنة",    badge: "صناعة محلية",   img: "/p-labneh-zaatar.png",         desc: "كرات لبنة منقوعة في زيت الزيتون البكر مع الزعتر البلدي — وصفة موروثة من بلاد الشام." },
   { name: "لبنة بالزيت · نعنع",     accent: "منعشة في كل لقمة",     cat: "لبنة",    badge: "صناعة محلية",   img: "/p-labneh-mint.png",           desc: "كرات لبنة بزيت الزيتون ونعنع طازج — منعشة وأنيقة تُزيّن كل مائدة بنكهة مميزة." },
   { name: "لبنة بالزيت · شطة",      accent: "نكهة قوية وجريئة",     cat: "لبنة",    badge: "صناعة محلية",   img: "/p-labneh-shatta.png",         desc: "كرات لبنة حارة بزيت الزيتون والشطة الطبيعية — لمن يُحب النكهة القوية والطعم الجريء." },
   { name: "فيتا ديرتنا",            accent: "من البحر المتوسط",      cat: "جبنة",    badge: "منتج مميز",      img: "/p-cheese-feta.png",           desc: "جبنة فيتا كريمية بنكهة متوسطية أصيلة — غنية ودسمة، مثالية مع الطماطم والزيتون." },
   { name: "حلوم سادة",              accent: "يُشوى ولا يذوب",        cat: "حلوم",    badge: "طبيعي ١٠٠٪",    img: "/p-halloum-plain.png",         desc: "الحلوم التقليدي الأصيل الذي يحتفظ بشكله على النار — مثالي لفطور العائلة الأصيل." },
-  { name: "حلوم براعي",             accent: "من المراعي المفتوحة",   cat: "حلوم",    badge: "صناعة تقليدية", img: "/p-halloum-shepherd.png",      desc: "حلوم من أبقار ترعى في مراعٍ مفتوحة — طعم أغنى وأعمق يُحاكي أصالة الطبيعة." },
+  { name: "حلوم براغي",             accent: "من المراعي المفتوحة",   cat: "حلوم",    badge: "صناعة تقليدية", img: "/p-halloum-shepherd.png",      desc: "حلوم من أبقار ترعى في مراعٍ مفتوحة — طعم أغنى وأعمق يُحاكي أصالة الطبيعة." },
   { name: "حلوم رول",               accent: "عملي وشهي",             cat: "حلوم",    badge: "طازج يومياً",    img: "/p-halloum-roll.png",          desc: "حلوم رول عملي الشكل ومثالي للتقطيع — يُقدَّم طازجاً يومياً ويُلائم كل مائدة." },
   { name: "لبنة بالزيت · سادة",     accent: "بساطة فاخرة",          cat: "لبنة",    badge: "صناعة محلية",   img: "/p-labneh-plain.png",          desc: "كرات لبنة نقية بأجود أنواع زيت الزيتون البكر — بساطة تحمل نكهة الأصالة الحقيقية." },
+  { name: "لبن مخيض ديرتنا",        accent: "انتعاش طبيعي بطعم أردني أصيل", cat: "مشروبات الألبان", badge: "صناعة محلية", img: "/p-shneneh.png",         desc: "لبن مخيض طازج بقوام خفيف وطعم منعش، مثالي مع الوجبات اليومية والمشاوي." },
 ];
 
 const IMG_V = {
@@ -224,18 +225,16 @@ export default function Products() {
 
                 <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden"
                   style={{
-                    boxShadow: `0 28px 70px rgba(11,61,145,0.12), 0 8px 22px rgba(11,61,145,0.07)`,
+                    boxShadow: `0 28px 70px rgba(11,61,145,0.13), 0 8px 22px rgba(11,61,145,0.08)`,
                     border: `1px solid rgba(11,61,145,0.07)`,
-                    background: `linear-gradient(160deg, rgba(255,255,255,0.92) 0%, ${C.cream} 100%)`,
+                    background: `linear-gradient(180deg, #fdf9f3 0%, ${C.cream} 100%)`,
                   }}>
-                  <div className="absolute inset-0 opacity-[0.035]"
-                    style={{ backgroundImage: `radial-gradient(circle, ${C.blue} 1px, transparent 1px)`, backgroundSize: "22px 22px" }} />
                   <Image src={p.img} alt={p.name} fill
                     sizes="(max-width:1024px) 80vw, 44vw"
-                    className="object-contain p-10"
-                    style={{ filter: "drop-shadow(0 18px 44px rgba(11,61,145,0.14))" }} />
+                    className="object-contain p-5"
+                    style={{ filter: "contrast(1.07) saturate(1.18) brightness(0.97) drop-shadow(0 22px 50px rgba(100,70,20,0.24))" }} />
                   <div className="absolute inset-0 pointer-events-none"
-                    style={{ background: `linear-gradient(to top, ${C.cream}40 0%, transparent 40%)` }} />
+                    style={{ background: `linear-gradient(to top, ${C.cream}50 0%, transparent 45%)` }} />
                 </div>
 
                 {/* Number watermark */}

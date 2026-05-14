@@ -40,7 +40,7 @@ const SLIDES = [
   {
     id: 3,
     name: "حلوم طازج",
-    sub: "حلوم براعي طبيعي",
+    sub: "حلوم براغي طبيعي",
     headline: "ذهبي من الخارج",
     desc: "حلوم طبيعي من مراعي ديرتنا. يُشوى على نار حقيقية ليخرج بقشرة ذهبية مقرمشة وداخل طري لا يُقاوم.",
     img: "/p-halloum-plain.png",
@@ -161,7 +161,7 @@ export default function ProductOfDay() {
                     src={slide.img} alt={slide.name}
                     width={420} height={420}
                     className="object-contain"
-                    style={{ filter: "drop-shadow(0 24px 48px rgba(11,61,145,0.13)) brightness(1.04) saturate(1.06)" }}
+                    style={{ filter: "contrast(1.07) saturate(1.18) brightness(0.97) drop-shadow(0 26px 52px rgba(100,70,20,0.22))" }}
                     priority
                   />
                 </motion.div>
