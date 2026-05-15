@@ -40,6 +40,7 @@ const PRODUCTS = [
   { name: "حلوم رول",               accent: "عملي وشهي",             cat: "حلوم",    badge: "طازج يومياً",    img: "/p-halloum-roll.png",          desc: "حلوم رول عملي الشكل ومثالي للتقطيع — يُقدَّم طازجاً يومياً ويُلائم كل مائدة." },
   { name: "لبنة بالزيت · سادة",     accent: "بساطة فاخرة",          cat: "لبنة",    badge: "صناعة محلية",   img: "/p-labneh-plain.png",          desc: "كرات لبنة نقية بأجود أنواع زيت الزيتون البكر — بساطة تحمل نكهة الأصالة الحقيقية." },
   { name: "لبن مخيض ديرتنا",        accent: "انتعاش طبيعي بطعم أردني أصيل", cat: "مشروبات الألبان", badge: "صناعة محلية", img: "/p-shneneh.png",         desc: "لبن مخيض طازج بقوام خفيف وطعم منعش، مثالي مع الوجبات اليومية والمشاوي." },
+  { name: "لبن رايب ديرتنا",         accent: "قوام غني وطعم طبيعي منعش",   cat: "مشروبات الألبان", badge: "طبيعي ١٠٠٪",    img: "/p-laban-rayeb.png",      desc: "لبن رايب طازج بقوام غني وطعم طبيعي منعش مناسب للوجبات اليومية.",       ingredients: "حليب بقري طازج مبستر ١٠٠٪ كامل الدسم، روبة. (نسبة الدسم لا تقل عن ٣٪).", sizes: ["3 كغم", "4 كغم"] },
 ];
 
 const IMG_V = {
@@ -152,10 +153,25 @@ export default function Products() {
                   style={{ width: 200, background: `linear-gradient(to right, ${C.gold}65, ${C.gold}18, transparent)` }} />
 
                 {/* Description */}
-                <p className="leading-[1.82] mb-4"
+                <p className={`leading-[1.82] ${(p as any).sizes ? 'mb-4' : 'mb-4'}`}
                   style={{ fontSize: "clamp(0.9rem, 1.05vw, 0.98rem)", color: "rgba(26,44,30,0.60)", fontWeight: 400, maxWidth: 400 }}>
                   {p.desc}
                 </p>
+
+                {/* Sizes */}
+                {(p as any).sizes && (
+                  <div className="flex items-center gap-2 mb-6">
+                    <span style={{ fontSize: "11px", fontWeight: 700, color: "rgba(26,44,30,0.4)" }}>الأحجام:</span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {(p as any).sizes.map((sz: string) => (
+                        <span key={sz} className="inline-flex items-center justify-center rounded-md px-2.5 py-1 font-[700]"
+                          style={{ fontSize: "10.5px", background: `${C.blue}10`, color: C.blue, border: `1px solid ${C.blue}20` }}>
+                          {sz}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Freshness badge */}
                 <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 mb-9"

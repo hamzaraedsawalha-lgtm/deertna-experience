@@ -61,6 +61,16 @@ const PRODUCTS = [
     accent: "#C4A870",
     bg: "linear-gradient(145deg, #1C1608 0%, #261E0A 100%)",
   },
+  {
+    id: 7,
+    img: "/p-laban-rayeb.png",
+    name: "لبن رايب ديرتنا",
+    category: "مشروبات الألبان",
+    desc: "قوام غني وطعم طبيعي منعش — مثالي مع الوجبات اليومية",
+    accent: "#7EB8D4",
+    bg: "linear-gradient(145deg, #081422 0%, #0C1C2E 100%)",
+    sizes: ["3 كغم", "4 كغم"]
+  },
 ];
 
 export default function PremiumShowcase() {
@@ -172,10 +182,22 @@ export default function PremiumShowcase() {
                   style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.4rem)", lineHeight: 1.1 }}>
                   {prod.name}
                 </h3>
-                <p className="text-white/55 font-[400] leading-[1.65]"
+                <p className={`text-white/55 font-[400] leading-[1.65] ${(prod as any).sizes ? 'mb-4' : ''}`}
                   style={{ fontSize: "clamp(0.85rem, 1.1vw, 0.95rem)", maxWidth: 340 }}>
                   {prod.desc}
                 </p>
+
+                {/* Sizes */}
+                {(prod as any).sizes && (
+                  <div className="flex flex-wrap gap-2">
+                    {(prod as any).sizes.map((sz: string) => (
+                      <span key={sz} className="inline-flex items-center justify-center rounded-md px-2.5 py-1 font-[600]"
+                        style={{ fontSize: "11px", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", border: "1px solid rgba(255,255,255,0.15)" }}>
+                        {sz}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.div>
           </AnimatePresence>

@@ -25,6 +25,7 @@ type Product = {
   img?: string;
   comingSoon?: boolean;
   ingredients?: string[];
+  sizes?: string[];
 };
 
 type Category = {
@@ -83,6 +84,7 @@ const CATEGORIES: Category[] = [
     id: 'drinks', title: 'مشروبات الألبان', subtitle: 'انتعاش طبيعي من مزارعنا', accent: C.green,
     products: [
       { name: 'لبن مخيض ديرتنا (1 لتر)', desc: 'لبن مخيض طازج بطعم منعش وقوام خفيف مناسب للوجبات اليومية.', img: '/p-shneneh.png', ingredients: ['حليب بقري طازج مبستر', 'ملح طعام'], comingSoon: true },
+      { name: 'لبن رايب ديرتنا', desc: 'لبن رايب طازج بقوام غني وطعم طبيعي منعش مناسب للوجبات اليومية.', img: '/p-laban-rayeb.png', ingredients: ['حليب بقري طازج مبستر ١٠٠٪ كامل الدسم', 'روبة', '(نسبة الدسم لا تقل عن ٣٪)'], sizes: ['3 كغم', '4 كغم'] },
     ],
   },
 ];
@@ -235,7 +237,7 @@ function ProductCard({ product, accent }: { product: Product; accent: string }) 
           </h3>
 
           {/* Description — 2 line clamp */}
-          <p className={`font-[400] leading-[1.65] ${product.name.includes('مخيض') ? 'mb-2.5' : 'flex-1 mb-3'}`}
+          <p className={`font-[400] leading-[1.65] ${product.sizes ? 'mb-2.5' : (product.name.includes('مخيض') ? 'mb-2.5' : 'flex-1 mb-3')}`}
             style={{
               fontSize: "0.78rem",
               color: "rgba(26,44,30,0.52)",
@@ -243,9 +245,22 @@ function ProductCard({ product, accent }: { product: Product; accent: string }) 
               WebkitLineClamp: 2,
               WebkitBoxOrient: "vertical" as const,
               overflow: "hidden",
+              flex: product.sizes ? '1' : undefined
             }}>
             {product.desc}
           </p>
+
+          {/* Sizes */}
+          {product.sizes && product.sizes.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 mb-3">
+              {product.sizes.map(sz => (
+                <span key={sz} className="inline-flex items-center justify-center rounded-md px-2 py-0.5 font-[600]"
+                  style={{ fontSize: "10px", background: `rgba(11,61,145,0.06)`, color: C.blue, border: `1px solid rgba(11,61,145,0.1)` }}>
+                  {sz}
+                </span>
+              ))}
+            </div>
+          )}
 
           {/* CTA */}
           {product.comingSoon ? (
