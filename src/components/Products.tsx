@@ -15,7 +15,18 @@ const C = {
   dark:  "#1A2C1E",
 } as const;
 
-const PRODUCTS = [
+interface Product {
+  name: string;
+  accent: string;
+  cat: string;
+  badge: string;
+  img: string;
+  desc: string;
+  ingredients?: string;
+  sizes?: string[];
+}
+
+const PRODUCTS: Product[] = [
   { name: "جبنة مغلية حلوة",        accent: "طرية وطازجة يومياً",    cat: "جبنة",    badge: "طازج يومياً",    img: "/p-cheese-mughliya.png",       desc: "جبنة طرية بملمس ناعم ونكهة حلوة خفيفة — تُصنع بالطريقة التقليدية كل يوم من حليب ديرتنا الطازج." },
   { name: "جبنة عكاوي",             accent: "نعومة لا تُقاوم",       cat: "جبنة",    badge: "صناعة تقليدية", img: "/p-cheese-akkawi.png",         desc: "بنكهة أصيلة وملمس طري لا يُنسى — تُصنع يدوياً يومياً من حليب طازج بدون أي إضافات." },
   { name: "جبنة مبسترة",            accent: "جودة وسلامة غذائية",    cat: "جبنة",    badge: "طبيعي ١٠٠٪",    img: "/p-cheese-mubastara.png",      desc: "مبسترة بعناية للحفاظ على نكهتها الطبيعية الكاملة مع أعلى معايير الجودة والسلامة الغذائية." },
@@ -153,17 +164,17 @@ export default function Products() {
                   style={{ width: 200, background: `linear-gradient(to right, ${C.gold}65, ${C.gold}18, transparent)` }} />
 
                 {/* Description */}
-                <p className={`leading-[1.82] ${(p as any).sizes ? 'mb-4' : 'mb-4'}`}
+                <p className={`leading-[1.82] ${p.sizes ? 'mb-4' : 'mb-4'}`}
                   style={{ fontSize: "clamp(0.9rem, 1.05vw, 0.98rem)", color: "rgba(26,44,30,0.60)", fontWeight: 400, maxWidth: 400 }}>
                   {p.desc}
                 </p>
 
                 {/* Sizes */}
-                {(p as any).sizes && (
+                {p.sizes && (
                   <div className="flex items-center gap-2 mb-6">
                     <span style={{ fontSize: "11px", fontWeight: 700, color: "rgba(26,44,30,0.4)" }}>الأحجام:</span>
                     <div className="flex flex-wrap gap-1.5">
-                      {(p as any).sizes.map((sz: string) => (
+                      {p.sizes.map((sz: string) => (
                         <span key={sz} className="inline-flex items-center justify-center rounded-md px-2.5 py-1 font-[700]"
                           style={{ fontSize: "10.5px", background: `${C.blue}10`, color: C.blue, border: `1px solid ${C.blue}20` }}>
                           {sz}

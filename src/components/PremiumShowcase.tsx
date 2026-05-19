@@ -6,7 +6,18 @@ import Image from "next/image";
 
 const E = [0.16, 1, 0.3, 1] as const;
 
-const PRODUCTS = [
+interface Product {
+  id: number;
+  img: string;
+  name: string;
+  category: string;
+  desc: string;
+  accent: string;
+  bg: string;
+  sizes?: string[];
+}
+
+const PRODUCTS: Product[] = [
   {
     id: 1,
     img: "/p-labneh-soft.png",
@@ -182,15 +193,15 @@ export default function PremiumShowcase() {
                   style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.4rem)", lineHeight: 1.1 }}>
                   {prod.name}
                 </h3>
-                <p className={`text-white/55 font-[400] leading-[1.65] ${(prod as any).sizes ? 'mb-4' : ''}`}
+                <p className={`text-white/55 font-[400] leading-[1.65] ${prod.sizes ? 'mb-4' : ''}`}
                   style={{ fontSize: "clamp(0.85rem, 1.1vw, 0.95rem)", maxWidth: 340 }}>
                   {prod.desc}
                 </p>
 
                 {/* Sizes */}
-                {(prod as any).sizes && (
+                {prod.sizes && (
                   <div className="flex flex-wrap gap-2">
-                    {(prod as any).sizes.map((sz: string) => (
+                    {prod.sizes.map((sz: string) => (
                       <span key={sz} className="inline-flex items-center justify-center rounded-md px-2.5 py-1 font-[600]"
                         style={{ fontSize: "11px", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", border: "1px solid rgba(255,255,255,0.15)" }}>
                         {sz}
