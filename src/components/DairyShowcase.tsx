@@ -15,7 +15,7 @@ const C = {
 
 const PRODUCTS = [
   {
-    img: "/p-labneh-soft.png",
+    img: "/p-labneh-soft-new.jpg",
     name: "لبنة طرية",
     cat: "لبنة",
     desc: "كريمية ناعمة مع رشّة زيت زيتون بكر — وجبة الصباح الأصيلة",
@@ -29,17 +29,17 @@ const PRODUCTS = [
     badge: "#0A2F73",
   },
   {
-    img: "/p-labneh-zaatar.png",
+    img: "/p-labneh-zaatar-new.jpg",
     name: "لبنة بالزعتر",
     cat: "لبنة",
     desc: "مزيج عريق من اللبنة الطرية والزعتر البلدي الأخضر",
     badge: "#2E8B57",
   },
   {
-    img: "/p-halloum-plain.png",
-    name: "حلوم طازج",
+    img: "/p-halloum-shepherd.png",
+    name: "حلوم براغي",
     cat: "حلوم",
-    desc: "تقليدي بامتياز — يُشوى أو يُقلى، لا يذوب",
+    desc: "حلوم طبيعي من أبقار ترعى في مراعٍ مفتوحة بطعم أغنى وأعمق",
     badge: "#C9A46A",
   },
   {
@@ -50,7 +50,7 @@ const PRODUCTS = [
     badge: "#0A2F73",
   },
   {
-    img: "/p-labneh-jarshiya.png",
+    img: "/p-labneh-jarshiya-new.jpg",
     name: "لبنة جرشية",
     cat: "لبنة",
     desc: "مُجففة بطريقة جرش التقليدية — أرق وأعمق نكهةً",

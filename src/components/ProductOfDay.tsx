@@ -25,7 +25,7 @@ const SLIDES = [
     sub: "كرات لبنة مع زعتر بلدي",
     headline: "كل صباح يستحق",
     desc: "لبنة كريمية ناعمة، تغمرها قطرات زيت الزيتون البكر، مع الزعتر البلدي الجاف. على الخبز الطازج — لا يوجد أفضل من هذا.",
-    img: "/p-labneh-zaatar.png",
+    img: "/p-labneh-zaatar-new.jpg",
     badge: "طازج يومياً",
   },
   {
@@ -39,11 +39,11 @@ const SLIDES = [
   },
   {
     id: 3,
-    name: "حلوم طازج",
-    sub: "حلوم براغي طبيعي",
+    name: "حلوم براغي",
+    sub: "حلوم طبيعي من مزارعنا",
     headline: "ذهبي من الخارج",
-    desc: "حلوم طبيعي من مراعي ديرتنا. يُشوى على نار حقيقية ليخرج بقشرة ذهبية مقرمشة وداخل طري لا يُقاوم.",
-    img: "/p-halloum-plain.png",
+    desc: "حلوم طبيعي من أبقار ترعى في المراعي المفتوحة. يُشوى على نار حقيقية ليخرج بقشرة ذهبية مقرمشة وداخل طري لا يُقاوم.",
+    img: "/p-halloum-shepherd.png",
     badge: "طبيعي ١٠٠٪",
   },
   {
@@ -52,7 +52,7 @@ const SLIDES = [
     sub: "ناعمة كالحرير",
     headline: "نعومة من الطبيعة",
     desc: "لبنة ناعمة كريمية مصنوعة من أجود أنواع الحليب الطازج. بدون إضافات، بدون مواد حافظة — فقط الطعم الحقيقي.",
-    img: "/p-labneh-soft.png",
+    img: "/p-labneh-soft-new.jpg",
     badge: "طبيعي ١٠٠٪",
   },
   {
@@ -145,9 +145,13 @@ export default function ProductOfDay() {
           {/* LEFT — Product image */}
           <div className="relative flex items-center justify-center order-2 lg:order-1">
 
-            {/* Soft warm glow behind product — replaces neon ring */}
-            <div className="absolute w-72 h-72 md:w-96 md:h-96 rounded-full pointer-events-none"
-              style={{ background: `radial-gradient(ellipse at center, rgba(201,164,106,0.20) 0%, transparent 70%)` }} />
+            {/* Soft white studio spotlight to make product colors pop */}
+            <div className="absolute w-72 h-72 md:w-96 md:h-96 rounded-full pointer-events-none z-0"
+              style={{ background: `radial-gradient(ellipse at center, rgba(255,255,255,0.50) 0%, transparent 65%)` }} />
+
+            {/* Soft warm ambient glow around the spotlight */}
+            <div className="absolute w-80 h-80 md:w-[26rem] md:h-[26rem] rounded-full pointer-events-none z-0"
+              style={{ background: `radial-gradient(ellipse at center, rgba(201,164,106,0.18) 0%, transparent 70%)` }} />
 
             <AnimatePresence mode="wait">
               <motion.div key={`img-${idx}`}
@@ -161,7 +165,7 @@ export default function ProductOfDay() {
                     src={slide.img} alt={slide.name}
                     width={420} height={420}
                     className="object-contain"
-                    style={{ filter: "contrast(1.07) saturate(1.18) brightness(0.97) drop-shadow(0 26px 52px rgba(100,70,20,0.22))" }}
+                    style={{ filter: "contrast(1.06) brightness(1.03)", mixBlendMode: "multiply" }}
                     priority
                   />
                 </motion.div>

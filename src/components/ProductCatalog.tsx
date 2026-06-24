@@ -41,52 +41,41 @@ const CATEGORIES: Category[] = [
     id: 'fresh-cheese', title: 'الأجبان الطازجة', subtitle: 'مصنوعة يومياً من الحليب الطازج', accent: C.blue,
     products: [
       { name: 'جبنة مغلية حلوة', desc: 'طرية وناعمة، تُصنع يومياً من حليب ديرتنا الطازج.', img: '/p-cheese-mughliya.png', ingredients: ['حليب بقري طازج مبستر', 'منفحة', 'ملح طعام', 'ماء نقي'] },
+      { name: 'جبنة مغلية حلوة', desc: 'محفوظة بتقنية الفاكيوم للحفاظ على طراوتها ونكهتها.', img: '/p-cheese-vac-mughliya-new.png', ingredients: ['حليب بقري طازج مبستر', 'منفحة', 'ملح طعام', 'ماء نقي'] },
+      { name: 'جبنة مغلية نابلسية', desc: 'محضرة على الطريقة النابلسية التقليدية وتُصنع يومياً طازجة.', img: '/p-cheese-mughliya-nabulsi.png', comingSoon: true },
       { name: 'جبنة عكاوي', desc: 'بنكهة أصيلة وملمس طري لا يُنسى، يدوية الصنع.', img: '/p-cheese-akkawi.png', ingredients: ['حليب بقري طازج مبستر', 'منفحة', 'ملح طعام', 'ماء نقي'] },
       { name: 'جبنة مبسترة', desc: 'مبسترة بعناية للحفاظ على نكهتها الطبيعية الكاملة.', img: '/p-cheese-mubastara.png', ingredients: ['حليب بقر مبستر', 'ملح', 'أنفحة طبيعية'] },
-      { name: 'جبنة سنابل', desc: 'ذات ملمس كريمي وعطر حليب طازج بهوية شامية.', img: '/p-cheese-sanabel.png', ingredients: ['حليب بقري طازج مبستر', 'منفحة', 'ملح طعام', 'ماء نقي'] },
-      { name: 'جبنة اريش', desc: 'خفيفة وغنية بالبروتين الطبيعي، مثالية لفطور صحي.', img: '/p-cheese-qareesh.png', ingredients: ['حليب بقري طازج مبستر', 'منفحة', 'ملح طعام', 'ماء نقي'] },
-      { name: 'جبنة شنكليش حل', desc: 'كرات مُعتَّقة بالزعتر والتوابل الطبيعية، وصفة الشام.', img: '/p-cheese-shanklish.png', ingredients: ['جبنة', 'لبنة', 'شطة', 'بهارات', 'زيت'] },
-      { name: 'مستكة', desc: 'نكهة ذهبية لا تُنسى، تُقدَّم طازجة كل يوم.', img: '/p-cheese-masnaka.png', ingredients: ['حليب بقر طازج', 'ملح', 'أنفحة طبيعية'] },
-      { name: 'فيتا', desc: 'كريمية بنكهة متوسطية، مثالية مع الطماطم والزيتون.', img: '/p-cheese-feta.png', ingredients: ['حليب بقري مجفف خالي الدسم', 'دسم الحليب', 'ماء', 'ملح', 'جيلاتين', 'منفحة', 'سوربات البوتاسيوم E235', 'مثبت 731'] },
-    ],
-  },
-  {
-    id: 'vacuum', title: 'منتجات الفاكيوم', subtitle: 'محفوظة بتقنية الفاكيوم للجودة الدائمة', accent: C.green,
-    products: [
-      { name: 'جبنة مغلية حلوة فاكيوم', desc: 'محفوظة بتقنية الفاكيوم للحفاظ على طراوتها ونكهتها.', img: '/p-cheese-vac-mughliya.png', comingSoon: true, ingredients: ['حليب بقري طازج مبستر', 'منفحة', 'ملح طعام', 'ماء نقي'] },
-      { name: 'جبنة عكاوي فاكيوم', desc: 'أصالة العكاوي محفوظة بنظام فاكيوم متطور.', img: '/p-cheese-vac-akkawi.png', comingSoon: true, ingredients: ['حليب بقري طازج مبستر', 'منفحة', 'ملح طعام', 'ماء نقي'] },
-      { name: 'جبنة نابلسية فاكيوم', desc: 'نكهة نابلسية أصيلة بتغليف عصري وآمن.', img: '/p-cheese-vac-nabulsi.png', ingredients: ['حليب غنم طازج مبستر', 'منفحة', 'ملح طعام', 'ماء نقي'] },
-      { name: 'مستكة فاكيوم', desc: 'ذهبية الطعم محفوظة بالفاكيوم مع عطرها الفريد.', img: '/p-cheese-vac-masnaka.png', comingSoon: true },
+      { name: 'جبنة بالمستكة', desc: 'جبنة بيضاء طازجة معطرة بحبيبات المستكة الفاخرة بطعم غني.', img: '/p-cheese-mastika.png', ingredients: ['حليب بقري طازج مبستر', 'مستكة طبيعية', 'منفحة', 'ملح طعام', 'ماء نقي'] },
+      { name: 'جبنة اريش', desc: 'خفيفة وغنية بالبروتين الطبيعي، مثالية لفطور صحي.', img: '/p-cheese-qareesh-new.png', ingredients: ['حليب بقري طازج مبستر', 'منفحة', 'ملح طعام', 'ماء نقي'] },
+      { name: 'شنكليش', desc: 'كرات مُعتَّقة بالزعتر والتوابل الطبيعية، وصفة الشام.', img: '/p-cheese-shanklish.png', ingredients: ['جبنة', 'لبنة', 'شطة', 'بهارات', 'زيت'] },
+      { name: 'جبنة مشللة', desc: 'جبنة مشللة بلدية خيوط، تُحضر يدوياً يومياً من الحليب الطازج بنكهة المحلب.', img: '/p-cheese-masnaka.png', ingredients: ['حليب بقر طازج', 'ملح', 'أنفحة طبيعية'] },
+      { name: 'فيتا', desc: 'كريمية بنكهة متوسطية، مثالية مع الطماطم والزيتون.', img: '/p-cheese-feta-new.png', ingredients: ['حليب بقري مجفف خالي الدسم', 'دسم الحليب', 'ماء', 'ملح', 'جيلاتين', 'منفحة', 'سوربات البوتاسيوم E235', 'مثبت 731'] },
     ],
   },
   {
     id: 'labneh', title: 'منتجات اللبنة', subtitle: 'بطابع بلدي وقوام كريمي طازج', accent: C.blue,
     products: [
-      { name: 'لبنة طرية', desc: 'كريمية ناعمة، تُصنع يومياً من أجود الحليب الطازج.', img: '/p-labneh-soft.png', ingredients: ['حليب بقري طازج ١٠٠٪ كامل الدسم'] },
-      { name: 'لبنة جامدة فاكيوم', desc: 'لبنة جامدة محفوظة بالفاكيوم للجودة الدائمة.', img: '/p-labneh-hard-vac.png', comingSoon: true, ingredients: ['حليب بقري طازج مبستر', 'بادئ', 'ملح طعام', 'ماء نقي'] },
-      { name: 'لبنة جامدة حل', desc: 'تقليدية وأصيلة بوصفة الأجداد دون أي تغيير.', img: '/p-labneh-hard.png', ingredients: ['حليب بقري طازج مبستر', 'بادئ', 'ملح طعام', 'ماء نقي'] },
-      { name: 'لبنة جرشية', desc: 'بملمس خفيف ونكهة طبيعية مميزة ومتوازنة.', img: '/p-labneh-jarshiya.png', ingredients: ['حليب بقري طازج ١٠٠٪ كامل الدسم'] },
-      { name: 'لبنة بالزيت كرات - زعتر', desc: 'منقوعة بزيت الزيتون والزعتر البلدي.', img: '/p-labneh-zaatar.png', ingredients: ['لبنة طازجة', 'زيت زيتون', 'زعتر', 'ملح'] },
-      { name: 'لبنة بالزيت كرات - نعنع', desc: 'منعشة بزيت الزيتون ونعنع طازج.', img: '/p-labneh-mint.png', ingredients: ['لبنة طازجة', 'زيت زيتون', 'نعناع', 'ملح'] },
-      { name: 'لبنة بالزيت كرات - شطة', desc: 'جريئة وحارة لمن يُحب النكهة القوية الأصيلة.', img: '/p-labneh-shatta.png', ingredients: ['لبنة طازجة', 'زيت زيتون', 'شطة', 'ملح'] },
-      { name: 'لبنة بالزيت كرات - سادة', desc: 'نقية بأجود زيت الزيتون، بساطة تحمل أصالة.', img: '/p-labneh-plain.png', ingredients: ['لبنة طازجة', 'زيت زيتون', 'ملح'] },
+      { name: 'لبنة طرية', desc: 'كريمية ناعمة، تُصنع يومياً من أجود الحليب الطازج.', img: '/p-labneh-soft-new.jpg', ingredients: ['حليب بقري طازج ١٠٠٪ كامل الدسم'] },
+      { name: 'لبنة جامدة', desc: 'لبنة جامدة طبيعية ومحفوظة بعناية للحفاظ على جودتها ونكهتها الأصيلة.', img: '/p-labneh-hard-new.jpg', ingredients: ['حليب بقري طازج مبستر', 'بادئ', 'ملح طعام', 'ماء نقي'] },
+      { name: 'لبنة جرشية', desc: 'بملمس خفيف ونكهة طبيعية مميزة ومتوازنة.', img: '/p-labneh-jarshiya-new.jpg', ingredients: ['حليب بقري طازج ١٠٠٪ كامل الدسم'] },
+      { name: 'لبنة بالزيت كرات - زعتر', desc: 'منقوعة بزيت الزيتون والزعتر البلدي.', img: '/p-labneh-zaatar-new.jpg', ingredients: ['لبنة طازجة', 'زيت زيتون', 'زعتر', 'ملح'] },
+      { name: 'لبنة بالزيت كرات - شطة', desc: 'جريئة وحارة لمن يُحب النكهة القوية الأصيلة.', img: '/p-labneh-shatta-new.jpg', ingredients: ['لبنة طازجة', 'زيت زيتون', 'شطة', 'ملح'] },
+      { name: 'لبنة بالزيت كرات - سادة', desc: 'نقية بأجود زيت الزيتون، بساطة تحمل أصالة.', img: '/p-labneh-plain-new.png', ingredients: ['لبنة طازجة', 'زيت زيتون', 'ملح'] },
     ],
   },
   {
     id: 'halloum', title: 'منتجات الحلوم', subtitle: 'مناسبة للشوي والقلي بطعم غني أصيل', accent: C.green,
     products: [
-      { name: 'حلوم سادة', desc: 'الحلوم التقليدي الأصيل الذي لا يذوب على النار.', img: '/p-halloum-plain.png', ingredients: ['حليب بقري طازج مبستر', 'منفحة', 'ملح طعام', 'ماء نقي'] },
       { name: 'حلوم براغي', desc: 'من أبقار مراعٍ مفتوحة، طعم أغنى وأعمق.', img: '/p-halloum-shepherd.png', ingredients: ['حليب بقر طازج', 'ملح', 'أنفحة طبيعية'] },
-      { name: 'حلوم رول', desc: 'عملي الشكل، طازج يومياً ويلائم كل مائدة.', img: '/p-halloum-roll.png', comingSoon: true },
     ],
   },
   {
-    id: 'drinks', title: 'مشروبات الألبان', subtitle: 'انتعاش طبيعي من مزارعنا', accent: C.green,
+    id: 'drinks', title: 'مشروبات وألبان', subtitle: 'طبيعية وصحية من مزارعنا', accent: C.green,
     products: [
-      { name: 'لبن مخيض ديرتنا (1 لتر)', desc: 'لبن مخيض طازج بطعم منعش وقوام خفيف مناسب للوجبات اليومية.', img: '/p-shneneh.png', ingredients: ['حليب بقري طازج مبستر', 'ملح طعام'], comingSoon: true },
-      { name: 'لبن رايب ديرتنا', desc: 'لبن رايب طازج بقوام غني وطعم طبيعي منعش مناسب للوجبات اليومية.', img: '/p-laban-rayeb.png', ingredients: ['حليب بقري طازج مبستر ١٠٠٪ كامل الدسم', 'روبة', '(نسبة الدسم لا تقل عن ٣٪)'], sizes: ['3 كغم', '4 كغم'] },
+      { name: 'لبن بقري', desc: 'لبن بقري طازج وغني بالقشطة، يُصنع بالطريقة التقليدية يومياً.', img: '/p-yogurt-cow.jpg', ingredients: ['حليب بقري طازج مبستر ١٠٠٪ كامل الدسم', 'روبة'] },
     ],
   },
+
 ];
 
 /* ════════════════════════════════════════════
@@ -184,17 +173,22 @@ function ProductCard({ product, accent }: { product: Product; accent: string }) 
         <div className="relative overflow-hidden flex-shrink-0"
           style={{ height: 190, background: `#fdf9f3` }}>
 
+          {/* Subtle spotlight behind product to blend white backgrounds cleanly */}
+          <div className="absolute inset-0 pointer-events-none z-0"
+            style={{ background: "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.50) 0%, transparent 68%)" }} />
+
           {product.img ? (
             <Image
               src={product.img}
               alt={product.name}
               fill
               sizes="(max-width:640px) 45vw, (max-width:1024px) 30vw, 22vw"
-              className="object-contain p-1"
+              className="object-contain p-2 relative z-10"
               style={{
-                transform: hovered ? "scale(1.05)" : "scale(1)",
+                transform: hovered ? "scale(1.15)" : "scale(1.08)",
                 transition: "transform 0.45s ease",
-                filter: `contrast(1.07) saturate(1.18) brightness(0.97) drop-shadow(0 12px 22px rgba(100,70,20,0.22))`,
+                filter: `contrast(1.06) brightness(1.03)`,
+                mixBlendMode: "multiply",
               }}
             />
           ) : (

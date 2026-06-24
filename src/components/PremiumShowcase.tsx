@@ -20,7 +20,7 @@ interface Product {
 const PRODUCTS: Product[] = [
   {
     id: 1,
-    img: "/p-labneh-soft.png",
+    img: "/p-labneh-soft-new.jpg",
     name: "لبنة طرية",
     category: "لبنة",
     desc: "كريمية الملمس، يومية الطزاجة — تُقدَّم مع زيت الزيتون البكر",
@@ -38,16 +38,16 @@ const PRODUCTS: Product[] = [
   },
   {
     id: 3,
-    img: "/p-halloum-plain.png",
-    name: "حلوم طازج",
+    img: "/p-halloum-shepherd.png",
+    name: "حلوم براغي",
     category: "حلوم",
-    desc: "تقليدي بامتياز — يُشوى ويُقدَّم على الفطور الأصيل",
+    desc: "حلوم طبيعي من أبقار ترعى في مراعٍ مفتوحة بطعم أغنى وأعمق",
     accent: "#D4A06A",
     bg: "linear-gradient(145deg, #1A1008 0%, #261808 100%)",
   },
   {
     id: 4,
-    img: "/p-labneh-zaatar.png",
+    img: "/p-labneh-zaatar-new.jpg",
     name: "لبنة بالزعتر",
     category: "لبنة",
     desc: "مزيج عريق من اللبنة الطرية والزعتر البلدي الأخضر",
@@ -65,7 +65,7 @@ const PRODUCTS: Product[] = [
   },
   {
     id: 6,
-    img: "/p-labneh-jarshiya.png",
+    img: "/p-labneh-jarshiya-new.jpg",
     name: "لبنة جرشية",
     category: "لبنة",
     desc: "لبنة مجففة بطريقة جرش التقليدية — أرق وأعمق نكهةً",
@@ -74,13 +74,12 @@ const PRODUCTS: Product[] = [
   },
   {
     id: 7,
-    img: "/p-laban-rayeb.png",
-    name: "لبن رايب ديرتنا",
+    img: "/p-yogurt-cow.jpg",
+    name: "لبن بقري",
     category: "مشروبات الألبان",
-    desc: "قوام غني وطعم طبيعي منعش — مثالي مع الوجبات اليومية",
+    desc: "طازج وغني بالقشطة، يُصنع بالطريقة التقليدية يومياً من حليب ديرتنا",
     accent: "#7EB8D4",
     bg: "linear-gradient(145deg, #081422 0%, #0C1C2E 100%)",
-    sizes: ["3 كغم", "4 كغم"]
   },
 ];
 
