@@ -144,10 +144,10 @@ export default function Products() {
                 </div>
 
                 {/* Product name */}
-                <h2 className="font-[800] tracking-[-0.028em] mb-2"
+                <h3 className="font-[800] tracking-[-0.028em] mb-2"
                   style={{ fontSize: "clamp(2.2rem, 4.5vw, 4.4rem)", lineHeight: 1.08, color: C.blue }}>
                   {p.name}
-                </h2>
+                </h3>
                 <p className="font-[500] mb-5"
                   style={{ fontSize: "clamp(1.1rem, 2vw, 1.6rem)", color: C.green, lineHeight: 1.2 }}>
                   {p.accent}
