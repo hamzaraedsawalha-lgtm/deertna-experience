@@ -14,6 +14,17 @@ export const metadata: Metadata = {
   title: "ديرتنا | الطبيعة في كل قطرة - ألبان وأجبان أردنية",
   description: "اكتشف الجودة الفاخرة والطعم الأصيل مع منتجات ديرتنا من الألبان والأجبان والشنينة. تجربة فريدة تجمع بين التقاليد والحداثة في الأردن.",
   keywords: ["شنينة", "شنينة ديرتنا", "ألبان", "أجبان", "حليب طازج", "ديرتنا", "منتجات ألبان أردنية", "فطور أردني", "لبنة", "عكاوي", "حلوم"],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/android-chrome-192x192.png", type: "image/png", sizes: "192x192" },
+      { url: "/android-chrome-512x512.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
