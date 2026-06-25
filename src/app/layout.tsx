@@ -11,7 +11,7 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://deiratna.com'),
+  metadataBase: new URL('https://deertnadairy.com'),
   title: "ديرتنا | الطبيعة في كل قطرة - ألبان وأجبان أردنية",
   description: "اكتشف الجودة الفاخرة والطعم الأصيل مع منتجات ديرتنا من الألبان والأجبان والشنينة. تجربة فريدة تجمع بين التقاليد والحداثة في الأردن.",
   keywords: ["شنينة", "شنينة ديرتنا", "ألبان", "أجبان", "حليب طازج", "ديرتنا", "منتجات ألبان أردنية", "فطور أردني", "لبنة", "عكاوي", "حلوم"],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ديرتنا | الطبيعة في كل قطرة",
     description: "اكتشف الجودة الفاخرة والطعم الأصيل مع منتجات ديرتنا من الألبان والأجبان والشنينة.",
-    url: 'https://deiratna.com',
+    url: 'https://deertnadairy.com',
     siteName: 'ديرتنا',
     images: [
       {
@@ -58,34 +58,34 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://deiratna.com/#organization",
+      "@id": "https://deertnadairy.com/#organization",
       "name": "Deertna | ديرتنا",
-      "url": "https://deiratna.com",
-      "logo": "https://deiratna.com/logo-deiratna-v2.png",
+      "url": "https://deertnadairy.com",
+      "logo": "https://deertnadairy.com/logo-deiratna-v2.png",
       "sameAs": []
     },
     {
       "@type": "WebSite",
-      "@id": "https://deiratna.com/#website",
-      "url": "https://deiratna.com",
+      "@id": "https://deertnadairy.com/#website",
+      "url": "https://deertnadairy.com",
       "name": "Deertna | ديرتنا",
       "description": "الطبيعة في كل قطرة - ألبان وأجبان أردنية",
       "publisher": {
-        "@id": "https://deiratna.com/#organization"
+        "@id": "https://deertnadairy.com/#organization"
       },
       "inLanguage": "ar-JO"
     },
     {
       "@type": "LocalBusiness",
       "name": "Deertna Dairy",
-      "image": "https://deiratna.com/logo-deiratna-v2.png",
+      "image": "https://deertnadairy.com/logo-deiratna-v2.png",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Amman",
         "addressRegion": "Amman Governorate",
         "addressCountry": "JO"
       },
-      "url": "https://deiratna.com",
+      "url": "https://deertnadairy.com",
       "telephone": "+962000000000"
     }
   ]
