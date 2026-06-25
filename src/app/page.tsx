@@ -16,27 +16,18 @@ export default function Home() {
             "@type": "ListItem",
             "position": 1,
             "name": "الرئيسية",
-            "item": "https://deiratna.com/"
+            "item": "https://deertnadairy.com/"
           }
         ]
       },
       {
-        "@type": "Product",
+        "@type": "CollectionPage",
+        "@id": "https://deertnadairy.com/#collection",
+        "url": "https://deertnadairy.com/",
         "name": "منتجات ديرتنا للألبان والأجبان",
-        "image": "https://deiratna.com/logo-deiratna-v2.png",
         "description": "تشكيلة واسعة من الألبان والأجبان الطازجة والشنينة من مزارع الأردن.",
-        "brand": {
-          "@type": "Brand",
-          "name": "ديرتنا"
-        },
-        "offers": {
-          "@type": "AggregateOffer",
-          "priceCurrency": "JOD",
-          "availability": "https://schema.org/InStoreOnly",
-          "seller": {
-            "@type": "Organization",
-            "name": "ديرتنا"
-          }
+        "isPartOf": {
+          "@id": "https://deertnadairy.com/#website"
         }
       }
     ]
