@@ -66,6 +66,7 @@ const CATEGORIES: Category[] = [
   {
     id: 'halloum', title: 'منتجات الحلوم', subtitle: 'مناسبة للشوي والقلي بطعم غني أصيل', accent: C.green,
     products: [
+      { name: 'جبنة حلوم', desc: 'جبنة حلوم بلدية طازجة، مثالية للشوي والقلي بطعمها الغني الأصيل.', img: '/p-halloum-cheese.jpg', ingredients: ['حليب بقري طازج مبستر', 'منفحة', 'ملح طعام', 'ماء نقي'] },
       { name: 'حلوم براغي', desc: 'من أبقار مراعٍ مفتوحة، طعم أغنى وأعمق.', img: '/p-halloum-shepherd.png', ingredients: ['حليب بقر طازج', 'ملح', 'أنفحة طبيعية'] },
     ],
   },

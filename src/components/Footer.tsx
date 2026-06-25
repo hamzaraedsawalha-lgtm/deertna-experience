@@ -49,7 +49,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-5">
               <div className="relative w-36 h-16 rounded-xl overflow-hidden"
                 style={{ background:"rgba(246,241,232,0.02)", border:"1px solid rgba(246,241,232,0.06)" }}>
-                <Image src="/logo11.png" alt="ديرتنا" fill className="object-contain p-1.5"/>
+                <Image src="/logo-deiratna-v2.png" alt="ديرتنا" fill className="object-contain p-1.5"/>
               </div>
             </Link>
             <p className="leading-[1.75] mb-6 font-[400]"

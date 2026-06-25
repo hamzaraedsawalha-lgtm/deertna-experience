@@ -57,7 +57,7 @@ export default function Navbar() {
             "relative transition-all duration-500",
             isScrolled ? "w-24 h-12" : "w-28 h-14"
           )}>
-            <Image src="/logo11.png" alt="ديرتنا" fill className="object-contain" priority />
+            <Image src="/logo-deiratna-v2.png" alt="ديرتنا" fill className="object-contain" priority />
           </div>
         </Link>
 
